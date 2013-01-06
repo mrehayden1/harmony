@@ -1,0 +1,23 @@
+name:                harmony
+version:             0.1.0.0
+-- synopsis:            
+-- description:         
+license:             BSD3
+license-file:        LICENSE
+author:              Matthew Hayden
+maintainer:          mrehayden@gmail.com
+-- copyright:           
+-- category:            
+build-type:          Simple
+cabal-version:       >=1.8
+
+executable harmony
+  extensions:          ForeignFunctionInterface
+                       GeneralizedNewtypeDeriving
+  ghc-options:         -threaded
+  main-is:             Main.hs
+  c-sources:           appkey.c
+  build-depends:       base ==4.5.*,
+                       libspotify ==0.1.*,
+                       parsec ==3.1.*,
+                       alsa-pcm ==0.6.*
